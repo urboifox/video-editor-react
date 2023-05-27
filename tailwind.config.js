@@ -13,6 +13,7 @@ export default {
         luluCleanBold: ["LuluCleanBold", "sans-serif"],
         luluClean: ["LuluClean", "sans-serif"],
         latoLight: ["Lato", "sans-serif"],
+        helvetica: ["Helvetica", "sans-serif"],
       },
     },
   },

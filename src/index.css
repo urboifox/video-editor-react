@@ -31,3 +31,20 @@ ion-icon {
   -ms-border-radius: 2px;
   -o-border-radius: 2px;
 }
+
+.paddingY {
+  @apply py-6 sm:py-16;
+}
+
+.paddingX {
+  @apply px-2 sm:px-16;
+}
+
+.heading2 {
+  @apply text-[30px] sm:text-[46px] font-luluCleanBold;
+}
+
+.circleBefore::before {
+  @apply content-[""] absolute aspect-square bg-transparent border-primary border-[7px] sm:border-[10px] w-[150px] sm:w-[200px] opacity-50 rounded-full -z-[1] top-[-30px] right-[-110px];
+  box-shadow: 0 0 10px #ffd754;
+}

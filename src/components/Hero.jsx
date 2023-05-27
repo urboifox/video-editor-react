@@ -6,8 +6,12 @@ import { facebook } from "../assets";
 const Hero = ({ data }) => {
   return (
     <div className="gridmeBig bg-primary">
-      <div className="flex bg-blue-500">
-        <img className="object-cover" src={data.image} alt="intro image" />
+      <div className="flex">
+        <img
+          className="object-cover w-full"
+          src={data.image}
+          alt="intro image"
+        />
       </div>
       <div className="pt-20 md:pt-40 pb-10 md:pb-20 flex flex-col items-center justify-center">
         <h1 className="mb-8 text-[46px] font-luluCleanBold tracking-widest">

@@ -6,3 +6,7 @@
   font-family: "LuluClean";
   src: url("./LuluClean.otf") format(opentype);
 }
+@font-face {
+  font-family: "Helvetica";
+  src: url("./Helvetica.ttf") format(truetype);
+}
