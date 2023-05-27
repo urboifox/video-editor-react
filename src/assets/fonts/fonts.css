@@ -1,0 +1,8 @@
+@font-face {
+  font-family: "LuluCleanBold";
+  src: url("./LuluCleanBold.otf") format(opentype);
+}
+@font-face {
+  font-family: "LuluClean";
+  src: url("./LuluClean.otf") format(opentype);
+}
