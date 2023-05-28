@@ -38,13 +38,13 @@ function Projects({ data }) {
             <div className="absolute w-full h-[1px] bg-primary top-[50%] left-0 -rotate-45"></div>
           </div>
           <div className="flex items-center lg:flex-row flex-col">
-            <div className="relative lg:mr-20 mb-10 w-[90%] lg:w-[70%] aspect-video">
+            <div className="relative lg:mr-20 mb-10 w-[100%] sm:w-[90%] lg:w-[70%] aspect-video">
               {videoData.id !== data.videos[0].id ? (
                 <div
                   onClick={() => {
                     swipe(-1);
                   }}
-                  className="text-primary cursor-pointer absolute top-1/2 left-[-35px] translate-y-[-50%] aspect-square"
+                  className="hidden sm:block text-primary cursor-pointer absolute top-1/2 left-[-35px] translate-y-[-50%] aspect-square"
                 >
                   <ion-icon name="chevron-back-outline"></ion-icon>
                 </div>
@@ -56,7 +56,7 @@ function Projects({ data }) {
                   onClick={() => {
                     swipe(1);
                   }}
-                  className="text-primary cursor-pointer absolute top-1/2 right-[-35px] translate-y-[-50%] aspect-square"
+                  className="hidden sm:block text-primary cursor-pointer absolute top-1/2 right-[-35px] translate-y-[-50%] aspect-square"
                 >
                   <ion-icon name="chevron-forward-outline"></ion-icon>
                 </div>

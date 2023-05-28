@@ -48,3 +48,8 @@ ion-icon {
   @apply content-[""] absolute aspect-square bg-transparent border-primary border-[7px] sm:border-[10px] w-[150px] sm:w-[200px] opacity-50 rounded-full -z-[1] top-[-30px] right-[-110px];
   box-shadow: 0 0 10px #ffd754;
 }
+
+.projects {
+}
+.projects .project-item {
+}
