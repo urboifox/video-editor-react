@@ -2,6 +2,7 @@
 import { Button } from "./";
 import { instagram, linkedin, twitter } from "../assets";
 import { facebook } from "../assets";
+import { nanoid } from "nanoid";
 
 const Hero = ({ data }) => {
   return (
@@ -26,7 +27,7 @@ const Hero = ({ data }) => {
           {data.socialMedia.map((e) => {
             const n = e.platform.toLowerCase();
             return (
-              <a href={e.link} key={e.id} target="_blank" rel="noreferrer">
+              <a href={e.link} key={nanoid()} target="_blank" rel="noreferrer">
                 <img
                   className="w-[25px] h-[25px]"
                   src={

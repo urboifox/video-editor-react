@@ -77,7 +77,7 @@ function Projects({ data }) {
               {videoData.embeded ? (
                 <iframe
                   className="w-full h-full"
-                  src={videoData.videoLink}
+                  src={videoData.video}
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
                 ></iframe>
@@ -89,7 +89,7 @@ function Projects({ data }) {
                   controlsList="nodownload"
                   disablePictureInPicture
                   type="video/mp4"
-                  src={videoData.videoLink}
+                  src={videoData.video}
                   className="w-full h-full"
                   autoPlay
                 ></video>
@@ -122,17 +122,17 @@ function Projects({ data }) {
             {data.headline}
           </h2>
         </div>
-        <div className="projects mt-28 paddingY grid gap-10">
+        <div className="projects">
           {data.videos.map((e) => {
             return (
               <div
-                className={`cursor-pointer project-item project-${e.id + 1}`}
+                className={`project-item project-${e.id}`}
                 key={e.id}
                 onClick={() => {
                   toggleVideo(e);
                 }}
               >
-                <img src={e.thumbnail} alt={e.title} />
+                <img src={e.image} alt={e.title} />
               </div>
             );
           })}

@@ -50,6 +50,57 @@ ion-icon {
 }
 
 .projects {
+  @apply mt-28 paddingY grid gap-10 relative max-w-[2000px] mx-auto;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 .projects .project-item {
+  @apply cursor-pointer relative;
+  background-color: #eee;
+}
+.projects .project-item img {
+  @apply h-full w-full;
+}
+
+.project-1,
+.project-4,
+.project-7,
+.project-10,
+.project-13,
+.project-16,
+.project-19,
+.project-22,
+.project-25,
+.project-28,
+.project-21,
+.project-24,
+.project-27,
+.project-30 {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+@media screen and (max-width: 767px) {
+  .projects {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+  .project-1,
+  .project-4,
+  .project-7,
+  .project-10,
+  .project-13,
+  .project-16,
+  .project-19,
+  .project-22,
+  .project-25,
+  .project-28,
+  .project-21,
+  .project-24,
+  .project-27,
+  .project-30 {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+  .project-item {
+    grid-column: span 2;
+  }
 }
