@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 /* eslint-disable react/prop-types */
 function Projects({ data }) {
   const [showVideo, setShowVideo] = useState(false);
   const [videoData, setVideoData] = useState(null);
+
+  const videoContent = useRef();
 
   const toggleVideo = (Eldata) => {
     if (!showVideo) {
@@ -14,6 +16,12 @@ function Projects({ data }) {
       setVideoData(null);
     }
   };
+
+  useEffect(() => {
+    setTimeout(() => {
+      videoContent.current.style.opacity = "1";
+    }, 500);
+  }, [videoData]);
 
   const swipe = (target) => {
     if (target === 1) {
@@ -37,7 +45,10 @@ function Projects({ data }) {
             <div className="absolute w-full h-[1px] bg-primary top-[50%] left-0 rotate-45"></div>
             <div className="absolute w-full h-[1px] bg-primary top-[50%] left-0 -rotate-45"></div>
           </div>
-          <div className="flex items-center lg:flex-row flex-col">
+          <div
+            className="opacity-0 transition-all duration-500 flex items-center lg:flex-row flex-col"
+            ref={videoContent}
+          >
             <div className="relative lg:mr-20 mb-10 w-[100%] sm:w-[90%] lg:w-[70%] aspect-video">
               {videoData.id !== data.videos[0].id ? (
                 <div
