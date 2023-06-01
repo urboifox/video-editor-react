@@ -96,7 +96,7 @@ function Projects({ data }) {
               )}
             </div>
             <div className="max-w-[90%] lg:max-w-[30%]">
-              <h3 className="text-[27px] font-helvetica text-white mb-3">
+              <h3 className="text-[20px] sm:text-[27px] font-helvetica text-white mb-3">
                 {videoData.title}
               </h3>
               <p className="mb-5 text-[16px] text-white">
@@ -117,8 +117,8 @@ function Projects({ data }) {
         ""
       )}
       <div>
-        <div className="max-w-[2000px] mx-auto">
-          <h2 className="z-[1] w-fit circleBefore heading2 text-white mt-20 relative">
+        <div className="max-w-[2000px] flex sm:justify-start justify-center mx-auto">
+          <h2 className="z-[1] text-[30px] sm:text-[46px] w-fit circleBefore heading2 text-white mt-20 relative">
             {data.headline}
           </h2>
         </div>

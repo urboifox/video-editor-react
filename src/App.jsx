@@ -34,14 +34,14 @@ function App() {
 
   return (
     <>
-      <TopBar place={`start`} />
+      <TopBar />
       <Hero data={data.heroSection} />
       <Projects data={data.projects} />
       <Seperator />
       <SecondProjects data={data.secondProjects} />
       <Seperator />
       <Contact data={data.contact} />
-      <TopBar place={`end`} />
+      <TopBar />
     </>
   );
 }
