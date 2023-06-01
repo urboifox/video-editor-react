@@ -1,5 +1,12 @@
 import axios from "axios";
-import { Hero, TopBar, Loader, Projects } from "./components";
+import {
+  Hero,
+  TopBar,
+  Loader,
+  Projects,
+  Seperator,
+  SecondProjects,
+} from "./components";
 import { useEffect, useState } from "react";
 
 function App() {
@@ -28,6 +35,9 @@ function App() {
       <TopBar />
       <Hero data={data.heroSection} />
       <Projects data={data.projects} />
+      <Seperator />
+      <SecondProjects data={data.secondProjects} />
+      <Seperator />
     </>
   );
 }

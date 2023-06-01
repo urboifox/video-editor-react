@@ -46,7 +46,12 @@ ion-icon {
 
 .circleBefore::before {
   @apply content-[""] absolute aspect-square bg-transparent border-primary border-[7px] sm:border-[10px] w-[150px] sm:w-[200px] opacity-50 rounded-full -z-[1] top-[-30px] right-[-110px];
-  box-shadow: 0 0 10px #ffd754;
+  box-shadow: 0 0 10px #ffd754, inset 0 0 10px #ffd754;
+}
+
+.circle {
+  @apply aspect-square border-primary border-[10px] sm:border-[13px] opacity-40 rounded-full;
+  box-shadow: 0 0 10px #ffd754, inset 0 0 10px #ffd754;
 }
 
 .projects {
@@ -58,7 +63,7 @@ ion-icon {
   background-color: #eee;
 }
 .projects .project-item img {
-  @apply h-full w-full;
+  @apply max-h-full w-full;
 }
 
 .project-1,
@@ -83,6 +88,9 @@ ion-icon {
   .projects {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   }
+  .secondProject-4 {
+    grid-column: span 1 !important;
+  }
   .project-1,
   .project-4,
   .project-7,
@@ -102,5 +110,28 @@ ion-icon {
   }
   .project-item {
     grid-column: span 2;
+  }
+}
+.secondProjects {
+  @apply grid gap-10 max-w-[2000px] mx-auto;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.secondProject-4 {
+  grid-column: span 2;
+}
+.secondProject-4 img {
+  @apply object-left;
+}
+
+@media screen and (max-width: 877px) {
+  .secondProject-4 {
+    grid-column: span 1;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .secondProjects {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   }
 }

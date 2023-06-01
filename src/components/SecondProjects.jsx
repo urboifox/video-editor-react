@@ -1,7 +1,7 @@
+/* eslint-disable react/prop-types */
 import { useEffect, useRef, useState } from "react";
 
-/* eslint-disable react/prop-types */
-function Projects({ data }) {
+const SecondProjects = ({ data }) => {
   const [showVideo, setShowVideo] = useState(false);
   const [videoData, setVideoData] = useState(null);
 
@@ -117,22 +117,21 @@ function Projects({ data }) {
         ""
       )}
       <div>
-        <div>
-          <h2 className="z-[1] w-fit circleBefore heading2 text-white mt-20 relative">
-            {data.headline}
-          </h2>
-        </div>
-        <div className="projects">
+        <div className="secondProjects">
           {data.videos.map((e) => {
             return (
               <div
-                className={`flex relative project-item project-${e.id}`}
+                className={`cursor-pointer w-full flex relative secondProject-item secondProject-${e.id}`}
                 key={e.id}
                 onClick={() => {
                   toggleVideo(e);
                 }}
               >
-                <img className="object-cover" src={e.image} alt={e.title} />
+                <img
+                  className="object-cover w-full"
+                  src={e.image}
+                  alt={e.title}
+                />
               </div>
             );
           })}
@@ -140,6 +139,6 @@ function Projects({ data }) {
       </div>
     </section>
   );
-}
+};
 
-export default Projects;
+export default SecondProjects;
