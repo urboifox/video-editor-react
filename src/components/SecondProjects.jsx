@@ -121,7 +121,7 @@ const SecondProjects = ({ data }) => {
           {data.videos.map((e) => {
             return (
               <div
-                className={`cursor-pointer w-full flex relative secondProject-item secondProject-${e.id}`}
+                className={`cursor-pointer w-full flex relative group secondProject-item secondProject-${e.id}`}
                 key={e.id}
                 onClick={() => {
                   toggleVideo(e);
@@ -132,6 +132,10 @@ const SecondProjects = ({ data }) => {
                   src={e.image}
                   alt={e.title}
                 />
+                <div className="absolute bg-primary transition-all duration-300 group-hover:bg-opacity-100 bg-opacity-25 w-[45px] aspect-square rounded-full flex items-center justify-center z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                  <ion-icon name="play-outline"></ion-icon>
+                </div>
+                <div className="absolute w-full h-full top-0 left-0 bg-secondary z-[5] bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-200"></div>
               </div>
             );
           })}

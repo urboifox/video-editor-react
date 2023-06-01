@@ -29,7 +29,9 @@ const TopBar = ({ place }) => {
 
   return (
     <div
-      className={`w-full h-20 md:h-44 transition-all duration-300 ${
+      className={`w-full ${
+        place === "end" ? "!bg-secondary" : ""
+      } h-20 md:h-44 transition-all duration-300 ${
         isScrolled ? "bg-white" : "bg-secondary"
       }`}
     ></div>
