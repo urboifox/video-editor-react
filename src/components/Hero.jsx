@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 import { Button } from "./";
-import { instagram, linkedin, twitter } from "../assets";
-import { facebook } from "../assets";
+import { instagram, linkedin, twitter, facebook } from "../assets";
 import { nanoid } from "nanoid";
 
 const Hero = ({ data }) => {

@@ -117,7 +117,7 @@ function Projects({ data }) {
         ""
       )}
       <div>
-        <div>
+        <div className="max-w-[2000px] mx-auto">
           <h2 className="z-[1] w-fit circleBefore heading2 text-white mt-20 relative">
             {data.headline}
           </h2>

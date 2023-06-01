@@ -6,6 +6,7 @@ import {
   Projects,
   Seperator,
   SecondProjects,
+  Contact,
 } from "./components";
 import { useEffect, useState } from "react";
 
@@ -32,12 +33,14 @@ function App() {
 
   return (
     <>
-      <TopBar />
+      <TopBar place={`start`} />
       <Hero data={data.heroSection} />
       <Projects data={data.projects} />
       <Seperator />
       <SecondProjects data={data.secondProjects} />
       <Seperator />
+      <Contact data={data.contact} />
+      <TopBar place={`end`} />
     </>
   );
 }

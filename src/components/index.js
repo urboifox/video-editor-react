@@ -5,4 +5,14 @@ import Button from "./Button";
 import Projects from "./Projects";
 import Seperator from "./Seperator";
 import SecondProjects from "./SecondProjects";
-export { TopBar, Hero, Loader, Button, Projects, Seperator, SecondProjects };
+import Contact from "./Contact";
+export {
+  TopBar,
+  Hero,
+  Loader,
+  Button,
+  Projects,
+  Seperator,
+  SecondProjects,
+  Contact,
+};
