@@ -41,7 +41,10 @@ const Contact = ({ data }) => {
             );
           })}
         </div>
-        <div className="cursor-pointer scrollUp w-full flex items-center justify-center mt-16">
+        <div
+          className="cursor-pointer scrollUp w-full flex items-center justify-center mt-16"
+          onClick={() => window.scrollTo(0, 0)}
+        >
           <ion-icon name="arrow-up-circle-outline"></ion-icon>
         </div>
       </div>
