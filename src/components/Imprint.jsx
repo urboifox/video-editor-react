@@ -9,13 +9,13 @@ const Imprint = ({ data }) => {
   }, []);
   return (
     <section
-      className="text-white text-[14px] mx-auto md:text-[30px] font-brandonLight font-light max-w-[1000px] px-0 md:px-20"
+      className="paddingX text-white text-[14px] mx-auto md:text-[30px] font-latoLight font-light max-w-[1000px] px-0 md:px-20"
       id="mainContent"
     >
       <h1 className="flex items-center justify-center mb-16">
         <Link
           to="/"
-          className="transition-all duration-200 hover:text-primary uppercase text-[75px] font-bold text-center w-full font-montserrat"
+          className="transition-all duration-200 hover:text-primary uppercase text-[75px] font-extrabold text-center w-full font-helvetica"
         >
           Home
         </Link>
