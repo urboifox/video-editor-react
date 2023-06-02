@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { instagram, linkedin, twitter, facebook } from "../assets";
 import { nanoid } from "nanoid";
+import { Footer } from "./";
 
 const Contact = ({ data }) => {
   return (
@@ -47,6 +48,7 @@ const Contact = ({ data }) => {
         >
           <ion-icon name="arrow-up-circle-outline"></ion-icon>
         </div>
+        <Footer />
       </div>
     </section>
   );

@@ -1,14 +1,7 @@
 import axios from "axios";
-import {
-  Hero,
-  TopBar,
-  Loader,
-  Projects,
-  Seperator,
-  SecondProjects,
-  Contact,
-} from "./components";
+import { TopBar, Loader, Home, Imprint } from "./components";
 import { useEffect, useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   const [data, setData] = useState(null);
@@ -17,7 +10,7 @@ function App() {
   // official: https://api.npoint.io/fcdb9d7731617539cddf
   useEffect(() => {
     axios
-      .get("https://api.npoint.io/fcdb9d7731617539cddf")
+      .get("https://api.npoint.io/8bddad89764b7decdc5c")
       .then((response) => {
         setData(response.data);
         setLoading(false);
@@ -33,16 +26,17 @@ function App() {
   }
 
   return (
-    <>
+    <BrowserRouter>
+      {console.log(data)}
       <TopBar />
-      <Hero data={data.heroSection} />
-      <Projects data={data.projects} />
-      <Seperator />
-      <SecondProjects data={data.secondProjects} />
-      <Seperator />
-      <Contact data={data.contact} />
+
+      <Routes>
+        <Route path="/" element={<Home data={data} />} />
+        <Route path="/imprint" element={<Imprint data={data.imprint} />} />
+      </Routes>
+
       <TopBar />
-    </>
+    </BrowserRouter>
   );
 }
 
