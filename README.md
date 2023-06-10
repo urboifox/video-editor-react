@@ -7,6 +7,8 @@
 - semantic html elements
 - tailwindcss
 
-## author
+## Links
 
-website: [Mohamed](https://mohamed-dev.netlify.app)
+Live: [video-editor-react.netlify.app](https://video-editor-react.netlify.app/)
+
+Author: [Mohamed](https://mohamed-dev.netlify.app)
