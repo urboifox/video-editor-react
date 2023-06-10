@@ -27,7 +27,6 @@ function App() {
 
   return (
     <BrowserRouter>
-      {console.log(data)}
       <TopBar />
 
       <Routes>

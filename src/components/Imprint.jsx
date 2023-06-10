@@ -96,17 +96,17 @@ const Imprint = ({ data }) => {
             Die verantwortliche Stelle für die Datenverarbeitung und den Inhalt
             auf dieser Website ist:
           </p>
-          <p className="within">{data.name}</p>
-          <p className="within">{data.address1}</p>
-          <p className="within">{data.address2}</p>
-          <p className="within">Telefon: {data.telefon}</p>
-          <p className="imprintP">E-Mail: {data.email}</p>
-          <p className="imprintP">
+          <pre className="within imprint">{data.name}</pre>
+          <pre className="within imprint">{data.address1}</pre>
+          <pre className="within imprint">{data.address2}</pre>
+          <pre className="within imprint">Telefon: {data.telefon}</pre>
+          <pre className="imprintP imprint">E-Mail: {data.email}</pre>
+          <pre className="imprintP imprint">
             Verantwortliche Stelle ist die natürliche oder juristische Person,
             die allein oder gemeinsam mit anderen über die Zwecke und Mittel der
             Verarbeitung von personenbezogenen Daten (z.B. Namen,
             E-Mail-Adressen o. Ä.) entscheidet.
-          </p>
+          </pre>
           <p className="imprintP">
             Widerruf Ihrer Einwilligung zur Datenverarbeitung
           </p>

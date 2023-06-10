@@ -99,9 +99,9 @@ const SecondProjects = ({ data }) => {
               <h3 className="text-[27px] font-helvetica text-white mb-3">
                 {videoData.title}
               </h3>
-              <p className="mb-5 text-[16px] text-white">
+              <pre className="mb-5 text-[16px] text-white">
                 {videoData.description}
-              </p>
+              </pre>
               <a
                 target="_blank"
                 className="text-[16px] text-white underline"

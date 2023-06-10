@@ -5,7 +5,7 @@ import { nanoid } from "nanoid";
 
 const Hero = ({ data }) => {
   return (
-    <div className="gridmeBig bg-primary">
+    <div className="gridmeBig bg-primary w-full">
       <div className="flex">
         <img
           className="object-cover w-full"
@@ -18,9 +18,9 @@ const Hero = ({ data }) => {
           {`${data.headline.slice(0, data.headline.length - 1)}`}
           <span className="text-white">{`${data.headline.slice(-1)}`}</span>
         </h1>
-        <p className=" mb-10 max-w-[320px] leading-6 tracking-wider text-center font-latoLight font-light">
+        <pre className=" mb-10 max-w-[320px] leading-6 tracking-wider text-center font-latoLight font-light">
           {data.paragraph}
-        </p>
+        </pre>
         <Button data={data.contactButton} />
         <div className="flex items-center justify-center gap-5">
           {data.socialMedia.map((e) => {

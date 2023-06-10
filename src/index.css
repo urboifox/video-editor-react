@@ -14,6 +14,9 @@ ion-icon {
   font-size: 25px;
 }
 
+body {
+  overflow-x: hidden;
+}
 /* width */
 ::-webkit-scrollbar {
   width: 4px;
@@ -58,13 +61,27 @@ ion-icon {
 
 .projects {
   @apply mt-28 paddingY grid gap-10 relative max-w-[2000px] mx-auto;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+@media (max-width: 400px) {
+  .projects {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
 }
 .projects .project-item {
   @apply cursor-pointer relative;
 }
 .projects .project-item img {
   @apply max-h-full w-full;
+}
+
+pre.imprint {
+  @apply max-w-full font-latoLight my-2;
+  white-space: pre-wrap;
+}
+pre {
+  @apply max-w-full font-latoLight;
+  white-space: pre-wrap;
 }
 /* 
 .project-1,

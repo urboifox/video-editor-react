@@ -46,10 +46,10 @@ function Projects({ data }) {
             <div className="absolute w-full h-[1px] bg-primary top-[50%] left-0 -rotate-45"></div>
           </div>
           <div
-            className="opacity-0 transition-all duration-500 flex items-center lg:flex-row flex-col"
+            className="opacity-0 transition-all duration-500 flex justify-center items-center lg:flex-row flex-col"
             ref={videoContent}
           >
-            <div className="relative lg:mr-20 mb-10 w-[100%] sm:w-[90%] lg:w-[70%] aspect-video">
+            <div className="relative lg:mr-20 mb-10 w-[95%] sm:w-[500px] lg:w-[700px] aspect-video">
               {videoData.id !== data.videos[0].id ? (
                 <div
                   onClick={() => {
@@ -74,34 +74,36 @@ function Projects({ data }) {
               ) : (
                 ""
               )}
-              {videoData.embeded ? (
-                <iframe
-                  className="w-full h-full"
-                  src={videoData.video}
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                ></iframe>
-              ) : (
-                <video
-                  preload="metadata"
-                  controls
-                  loop
-                  controlsList="nodownload"
-                  disablePictureInPicture
-                  type="video/mp4"
-                  src={videoData.video}
-                  className="w-full h-full"
-                  autoPlay
-                ></video>
-              )}
+              <div className="w-full h-full">
+                {videoData.embeded ? (
+                  <iframe
+                    className="w-full h-full"
+                    src={videoData.video}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                  ></iframe>
+                ) : (
+                  <video
+                    preload="metadata"
+                    controls
+                    loop
+                    controlsList="nodownload"
+                    disablePictureInPicture
+                    type="video/mp4"
+                    src={videoData.video}
+                    className="w-full h-full"
+                    autoPlay
+                  ></video>
+                )}
+              </div>
             </div>
             <div className="max-w-[90%] lg:max-w-[30%]">
               <h3 className="text-[20px] sm:text-[27px] font-helvetica text-white mb-3">
                 {videoData.title}
               </h3>
-              <p className="mb-5 text-[16px] text-white">
+              <pre className="mb-5 text-[16px] text-white">
                 {videoData.description}
-              </p>
+              </pre>
               <a
                 target="_blank"
                 className="text-[16px] text-white underline"
