@@ -10,7 +10,7 @@ function App() {
   // official: https://api.npoint.io/fcdb9d7731617539cddf
   useEffect(() => {
     axios
-      .get("https://api.npoint.io/8bddad89764b7decdc5c")
+      .get("https://api.npoint.io/fcdb9d7731617539cddf")
       .then((response) => {
         setData(response.data);
         setLoading(false);
